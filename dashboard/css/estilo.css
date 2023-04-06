@@ -12,12 +12,24 @@
 
 body{
     background-color: #DEDEDE;
+    transition: all 300ms ease;
 }
+body.dark{
+    background-color: #021729;
+}
+
 
 header{
     width: 250px;
     height: 100vh;
     background-color: #FFFFFF;
+    transition: all 300ms ease;
+}
+header.active{
+    width: 85px;
+}
+.dark header{
+    background-color: #103c62;
 }
 
 header nav{
@@ -40,6 +52,10 @@ header nav ul li a{
     align-items: center;
     gap: 16px;
     color: #FFFFFF;
+    transition: all 300ms ease;
+}
+.dark header nav ul li a{
+    color: #103c62;
 }
 
 header nav ul li ion-icon{
@@ -51,12 +67,28 @@ header nav ul li ion-icon{
     border-radius: 5px;
     color: #1e96fc;
     padding: 10px 2px;
+    transition: all 300ms ease;
+}
+.dark header nav ul li ion-icon{
+    background-color: #103c62;
+}
+
+header nav ul li span{
+    transition: all 300ms ease;
+}
+header.active nav ul li span{
+    display: none;
 }
 
 header nav .tema{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 300ms ease;
+}
+header.active nav .tema{
+    flex-direction: column;
+    gap: 16px;
 }
 
 header nav .tema ion-icon{
@@ -94,6 +126,20 @@ header nav .troca.active{
 header nav .troca.active::after{
     background-color: #1e96fc;
     left: calc(100% - 24px);
+}
+
+main{
+    width: calc(100% - 250px);
+    height: 100vh;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 60px;
+    transition: all 300ms ease;
+}
+main.active{
+    width: calc(100% - 85px);
 }
 
 
